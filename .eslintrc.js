@@ -20,6 +20,7 @@ module.exports = {
   },
   globals: {
         "console": false,
-        "document": false
+        "document": false,
+        "window": false
   }
 }
