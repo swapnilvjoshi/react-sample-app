@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "checktypes": "tsc",
-    "lint": "yarn eslint ./lib/*",
+    "lint": "yarn eslint ./lib/ --ext .js,.jsx,.ts,.tsx",
     "start": "tsc && webpack && nodemon --exec babel-node --extensions .ts ./lib/server.ts",
     "webpack": "webpack -wd",
     "test": "jest --watch"
@@ -43,15 +43,24 @@
     "webpack-cli": "^3.3.10"
   },
   "devDependencies": {
-    "@types/jest": "^25.1.1",
     "@types/express": "^4.17.2",
+    "@types/jest": "^25.1.1",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "@types/webpack": "^4.41.5",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-json": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
     "jest": "^25.1.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
   }
 }
