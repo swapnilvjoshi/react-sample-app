@@ -7,8 +7,9 @@
   "author": "Swapnil Joshi <swapnil.v.joshi@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "checktypes": "tsc",
     "lint": "yarn eslint ./lib/*",
-    "start": "nodemon --exec babel-node --extensions .ts ./lib/server.ts",
+    "start": "yarn checktypes && nodemon --exec babel-node --extensions .ts ./lib/server.ts",
     "webpack": "webpack -wd"
   },
   "babel": {
@@ -16,12 +17,18 @@
       "@babel/preset-typescript",
       "@babel/preset-react",
       "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-object-rest-spread"
     ]
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/node": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",

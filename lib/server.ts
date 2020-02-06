@@ -1,8 +1,8 @@
 import express from 'express'
-import config from './config'
+import Config from './Config'
 
 const app = express()
-const port = config.port
+const port = Config.PORT;
 
 
 app.use(express.static('public'))

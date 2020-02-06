@@ -21,15 +21,15 @@ module.exports = (env, { mode = 'development' }) => {
             options: {
               presets: [
                 '@babel/preset-env',
-                '@babel/preset-react',
                 '@babel/preset-typescript',
+                '@babel/preset-react',
               ],
-              // plugins: [
-              //   '@babel/plugin-external-helpers',
-              //   'babel-plugin-styled-components',
-              //   '@babel/plugin-proposal-class-properties',
-              //   '@babel/plugin-proposal-object-rest-spread',
-              // ],
+              plugins: [
+                // '@babel/plugin-external-helpers',
+                // 'babel-plugin-styled-components',
+                '@babel/plugin-proposal-class-properties',
+                '@babel/plugin-proposal-object-rest-spread',
+              ],
             },
           },
         },
