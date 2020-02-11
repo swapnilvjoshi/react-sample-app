@@ -9,7 +9,7 @@
   "scripts": {
     "checktypes": "tsc",
     "lint": "yarn eslint ./lib/ --ext .js,.jsx,.ts,.tsx",
-    "start": "tsc && webpack && nodemon --exec babel-node --extensions .ts ./lib/server.ts",
+    "start": "yarn lint && tsc && webpack && nodemon --exec babel-node --extensions .ts ./lib/server.ts",
     "webpack": "webpack -wd",
     "test": "jest --watch"
   },
@@ -38,6 +38,8 @@
     "express": "^4.17.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.5",
     "typescript": "^3.7.5",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
@@ -47,6 +49,7 @@
     "@types/jest": "^25.1.1",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
+    "@types/react-redux": "^7.1.7",
     "@types/webpack": "^4.41.5",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
