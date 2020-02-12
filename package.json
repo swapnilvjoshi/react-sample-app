@@ -2,14 +2,14 @@
   "name": "react-sample-app",
   "version": "1.0.0",
   "description": "React sample application",
-  "main": "lib/server.js",
+  "main": "src/server.js",
   "repository": "git@github.com:swapnilvjoshi/react-sample-app.git",
   "author": "Swapnil Joshi <swapnil.v.joshi@gmail.com>",
   "license": "MIT",
   "scripts": {
     "checktypes": "tsc",
-    "lint": "yarn eslint ./lib/ --ext .js,.jsx,.ts,.tsx",
-    "start": "yarn lint && tsc && webpack && nodemon --exec babel-node --extensions .ts ./lib/server.ts",
+    "lint": "yarn eslint ./src/ --ext .js,.jsx,.ts,.tsx",
+    "start": "yarn lint && tsc && webpack && nodemon --exec babel-node --extensions .ts ./src/server/server.ts",
     "webpack": "webpack -wd",
     "test": "jest --watch"
   },

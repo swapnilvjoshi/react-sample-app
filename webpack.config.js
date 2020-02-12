@@ -1,11 +1,13 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const webpack = require('webpack');
 
-module.exports = (env, { mode = 'development' }) => {
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+module.exports = () => {
   const config = {
-    mode,
+    mode: 'development',
     entry: {
-      app: './lib/components/App.tsx',
+      app: './src/components/App.tsx',
     },
     devtool: 'source-map',
     resolve: {

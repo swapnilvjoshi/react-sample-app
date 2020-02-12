@@ -25,6 +25,9 @@ module.exports = {
   globals: {
         'console': false,
         'document': false,
-        'window': false
+        'window': false,
+        '__dirname': false,
+        'require': false,
+        'module': false
   }
 }
