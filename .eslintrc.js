@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["eslint:recommended", "plugin:react/recommended", 'plugin:@typescript-eslint/recommended'],
+  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'prettier'],
   settings: {
@@ -8,6 +8,11 @@ module.exports = {
     },
     'import/resolver': {
       typescript: {},
+    },
+    react: {
+      'createClass': 'createReactClass',
+      'pragma': 'React',
+      'version': 'detect',
     },
   },
   rules: {
@@ -18,8 +23,8 @@ module.exports = {
     'no-console': ['warn', { 'allow': ['info', 'error'] }]
   },
   globals: {
-        "console": false,
-        "document": false,
-        "window": false
+        'console': false,
+        'document': false,
+        'window': false
   }
 }

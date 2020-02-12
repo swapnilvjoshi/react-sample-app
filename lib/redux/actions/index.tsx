@@ -1,11 +1,10 @@
-import { AppActionType } from './AppActionType';
-import { BaseAction, AppInitializeAction, AppLoadDataAction } from './actions';
-
-export type AppActions = BaseAction | AppInitializeAction | AppLoadDataAction;
+import { ActionType } from './ActionType';
+import { BaseAction, AppInitializeAction, AppLoadDataAction, AppActions } from './actions';
 
 export {
-  AppActionType,
+  ActionType,
   BaseAction,
   AppInitializeAction,
-  AppLoadDataAction
+  AppLoadDataAction,
+  AppActions
 }

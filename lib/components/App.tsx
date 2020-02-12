@@ -4,10 +4,10 @@ import { Provider, connect } from 'react-redux';
 import { store } from '../redux/store/store';
 import { AppState } from '../redux/state/states';
 import { Dispatch } from 'redux';
-import { AppActions, AppActionType } from '../redux/actions';
+import { AppActions, ActionType } from '../redux/actions';
 
 export interface LinkStateProps {
-  name: string;
+  displayLabel: string;
 }
 
 export interface LinkDispatchProps {
@@ -22,16 +22,16 @@ export type AppProps = LinkStateProps & LinkDispatchProps;
 const mapStateToProps = (state: AppState): LinkStateProps => {
   return {
     ...state,
-    name: 'Link State to Props'
+    displayLabel: 'This is a temporary label'
   }
 }
 
 //map dispatch to Props
 const mapDispatchToProps = (dispatch: Dispatch<AppActions>): LinkDispatchProps => {
   return {
-    configureApp: (): void => { dispatch({type: AppActionType.APP_CONFIGURE}) },
-    initializeApp: (): void => { dispatch({type: AppActionType.APP_INITIALIZE}) },
-    loadAppData: (): void => {dispatch({type: AppActionType.APP_LOAD_DATA}) }
+    configureApp: (): void => { dispatch({type: ActionType.APP_CONFIGURE}) },
+    initializeApp: (): void => { dispatch({type: ActionType.APP_INITIALIZE}) },
+    loadAppData: (): void => {dispatch({type: ActionType.APP_LOAD_DATA}) }
   }
 }
 
@@ -46,7 +46,10 @@ class App extends React.PureComponent<AppProps> {
   }
 
   render(): ReactNode {
-    return ( <h2>This is where react app will run</h2> );
+    return ( <>
+      <h2>This is where react app will run</h2>
+      <h4>{this.props.displayLabel}</h4>
+    </> );
   }
 }
 

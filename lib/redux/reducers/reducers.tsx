@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import { AppState } from '../state/states';
-import { AppActionType, AppActions } from '../actions';
+import { ActionType, AppActions } from '../actions';
 
 export const CoreReducer = (state: AppState, action: AppActions): AppState  => {
   switch(action.type) {
-    case AppActionType.APP_INITIALIZE: return {...state};
-    case AppActionType.APP_LOAD_DATA: return {...state};
+    case ActionType.APP_INITIALIZE: return {...state};
+    case ActionType.APP_LOAD_DATA: return {...state};
     default: return {...state};
   }
 }

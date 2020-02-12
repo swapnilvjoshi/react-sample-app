@@ -1,4 +1,4 @@
-export enum AppActionType {
+export enum ActionType {
   APP_CONFIGURE = 'APP_CONFIGURE',
   APP_INITIALIZE = 'APP_INITIALIZE',
   APP_LOAD_DATA = 'APP_LOAD_DATA'

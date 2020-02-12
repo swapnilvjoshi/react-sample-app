@@ -1,18 +1,20 @@
-import { AppActionType } from './AppActionType';
+import { ActionType } from './ActionType';
 import { Action } from 'redux';
 
 export interface BaseAction extends Action {
-  type: AppActionType;
+  type: ActionType;
 }
 
 export interface AppConfigureAction extends BaseAction {
-  type: AppActionType.APP_CONFIGURE;
+  type: ActionType.APP_CONFIGURE;
 }
 
 export interface AppInitializeAction extends BaseAction {
-  type: AppActionType.APP_INITIALIZE;
+  type: ActionType.APP_INITIALIZE;
 }
 
 export interface AppLoadDataAction extends BaseAction {
-  type: AppActionType.APP_LOAD_DATA;
+  type: ActionType.APP_LOAD_DATA;
 }
+
+export type AppActions = BaseAction | AppInitializeAction | AppLoadDataAction;
